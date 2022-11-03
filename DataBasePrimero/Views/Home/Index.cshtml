@@ -1,0 +1,18 @@
+﻿<!--REFERENCIA A MODELO VISTA DE BASE DE DATOS-->
+@model IEnumerable<DataBasePrimero.AccesoViews.AccesoViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--CON ESTE FOREACH MOSTRAMOS LOS DATOS-->
+@foreach (var acceso in Model)
+{
+    <h1>@acceso.nombre</h1>
+    <p>Nivel de acceso: @acceso.nivel</p>
+    <p class="m-2">Descripcion del acceso: @acceso.desc</p>
+    <br></br>
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
